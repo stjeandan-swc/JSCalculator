@@ -7,36 +7,68 @@
     <div class="grid-container">
       <div class="calculator">
         <form action="" name="form">
-          <input class="textview">
+          <input class="textview" name="textview">
         </form>
         <table>
           <tbody>
             <tr>
-              <td><input class="btn color-bg-grey" type="button" value="+"></td>
-              <td><input class="btn color-bg-grey" type="button" value="-"></td>
-              <td><input class="btn color-bg-grey" type="button" value="&times"></td>
-              <td><input class="btn color-bg-grey" type="button" value="&divide"></td>
+              <td>
+                <input id="addition" class="btn color-bg-grey" type="button" value="+" onclick="insertValue('+')">
+              </td>
+              <td>
+                <input id="subract" class="btn color-bg-grey" type="button" value="-" onclick="insertValue('-')">
+              </td>
+              <td>
+                <input id="multipy" class="btn color-bg-grey" type="button" value="&times" onclick="insertValue('*')">
+              </td>
+              <td>
+                <input id="divide" class="btn color-bg-grey" type="button" value="&divide" onclick="insertValue('/')">
+              </td>
             </tr>
             <tr>
-              <td><input class="btn color-bg-white" type="button" value="7"></td>
-              <td><input class="btn color-bg-white" type="button" value="8"></td>
-              <td><input class="btn color-bg-white" type="button" value="9"></td>
-              <td rowspan="4"><input class="btn" type="button" value="="></td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="7" onclick="insertValue(7)">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="8" onclick="insertValue(8)">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="9" onclick="insertValue(9)">
+              </td>
+              <td rowspan="4"><input id="eval" class="btn" type="button" value="=" onclick="calculate()"></td>
             </tr>
             <tr>
-              <td><input class="btn color-bg-white" type="button" value="4"></td>
-              <td><input class="btn color-bg-white" type="button" value="5"></td>
-              <td><input class="btn color-bg-white" type="button" value="6"></td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="4" onclick="insertValue(4)">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="5" onclick="insertValue(5)">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="6" onclick="insertValue(6)">
+              </td>
             </tr>
             <tr>
-              <td><input class="btn color-bg-white" type="button" value="3"></td>
-              <td><input class="btn color-bg-white" type="button" value="2"></td>
-              <td><input class="btn color-bg-white" type="button" value="1"></td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="3" onclick="insertValue(3)">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="2" onclick="insertValue(2)">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="1" onclick="insertValue(1)">
+              </td>
             </tr>
             <tr>
-              <td><input class="btn color-bg-white" type="button" value="0"></td>
-              <td><input class="btn color-bg-white" type="button" value="."></td>
-              <td><input class="btn color-bg-white" type="button" value="C"></td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="0" onclick="insertValue(0)">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="." onclick="insertValue('.')">
+              </td>
+              <td>
+                <input class="btn color-bg-white" type="button" value="C" onclick="clearCalc()">
+              </td>
             </tr>
           </tbody>
         </table>
