@@ -3,27 +3,6 @@ html, body {
   padding: 0px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 10vh 80vh 10vh;
-}
-
-.calculator {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  justify-self: center;
-  align-self: center;
-
-  width: 100%;
-  height: 100%;
-}
-
-.textview {
-  width: 100%;
-  height: 20%;
-}
-
 form {
   margin: 0px;
 }
@@ -45,6 +24,54 @@ td {
   height: 16%;
 }
 
+input[type="button"] {
+  border: 1px solid black;
+}
+
+td[rowspan] .btn {
+  background-color: orange;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 10% 15% 50% 15% 10%;
+  grid-template-rows: 10vh 80vh 10vh;
+}
+
+.calculator {
+  grid-column: 3/4;
+  grid-row: 2/3;
+  justify-self: center;
+  align-self: center;
+
+  width: 100%;
+  height: 100%;
+}
+
+.textview {
+  width: 100%;
+  height: 20%;
+  background-color: black;
+  color: white;
+  border: none;
+}
+
 .btn {
   width: 100%;
+  height: 100%;
+  font-size: 2rem;
+}
+
+.color-bg-white {
+  background-color: white;
+}
+
+.color-bg-grey {
+  background-color: grey;
+}
+
+@media only screen and (max-width: 768px) {
+  .calculator {
+    grid-column: 2/5;
+  }
 }
